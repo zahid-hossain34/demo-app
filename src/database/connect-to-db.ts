@@ -1,6 +1,7 @@
 
 
 import * as Mongoose from 'mongoose';
+import * as  ENV  from '../environment/env.local';
 Mongoose.set('strictQuery', true);
 
 export async function connect() {
@@ -23,10 +24,7 @@ export async function connect() {
       console.log('Reconnected to the database');
     });
 
-    await Mongoose.connect(
-      'mongodb+srv://zahid:5oi5GJgfmQa8vx4A@cluster0.vdmjohz.mongodb.net/nestjs-demo'
-     
-    );
+    await Mongoose.connect(ENV.MONGO_DB_CONNECTION_KEY);
   } catch (error) {
     console.error('Error connecting to the database:', error);
   }

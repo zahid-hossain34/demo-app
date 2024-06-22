@@ -1,0 +1,1 @@
+export const MONGO_DB_CONNECTION_KEY = 'mongodb+srv://zahid:5oi5GJgfmQa8vx4A@cluster0.vdmjohz.mongodb.net/nestjs-demo'
